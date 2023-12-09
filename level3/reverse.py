@@ -5,7 +5,7 @@ plain = "42"
 
 index = 3
 for i in range(1, len(s)):
-	print(ord(s[i]))
+	print(f's[{i}]: {s[i]} {ord(s[i])}')
 	plain = plain + f'{ord(s[i]):0>3}'
 
-print(plain)
+print("Result:", plain)
