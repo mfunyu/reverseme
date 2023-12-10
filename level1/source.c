@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int		main(int ac, char** av)
+int		main()
 {
 	char input[20];
 	char *str = "__stack_check";

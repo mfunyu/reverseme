@@ -13,7 +13,7 @@ int	_____syscall_malloc()
 	return puts("Good job.");
 }
 
-int	main(int argc, const char **argv, const char **envp)
+int	main()
 {
 	char nums[4];
 	char str1[31];
