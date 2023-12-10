@@ -14,7 +14,7 @@ int	ok()
 	return puts("Good job.");
 }
 
-int	main(int ac, char** av)
+int	main()
 {
 	char	input[24];
 	char	str2[9];
@@ -39,7 +39,7 @@ int	main(int ac, char** av)
 	num[3] = '\0';
 	while (true)
 	{
-		if (strlen(str2) > 8 || index1 >= strlen(input))
+		if (strlen(str2) > 8 || index1 >= (int)strlen(input))
 				break;
 		num[0] = input[index1];
 		num[1] = input[index1 + 1];
@@ -47,7 +47,6 @@ int	main(int ac, char** av)
 		str2[index2] = (char)atoi(num);
 		index1 += 3;
 		index2 += 1;
-		printf("%d\n", index1);
 	}
 	str2[index2] = '\0';
 
