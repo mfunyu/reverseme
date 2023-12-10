@@ -16,19 +16,18 @@ int	ok()
 
 int	main(int ac, char** av)
 {
-	char	input;
-	char	str1[24];
-	char	*str2;
+	char	input[24];
+	char	str2[9];
 	int		index1;
 	int		index2;
 
 	printf("Please enter key: ");
-	if (scanf("%23s", &input) != 1)
+	if (scanf("%23s", input) != 1)
 		no();
 
-	if (str1[0] != '0')
+	if (input[0] != '0')
 		no();
-	if (str1[1] != '0')
+	if (input[1] != '0')
 		no();
 
 	//fflush(*stdin);
@@ -36,20 +35,19 @@ int	main(int ac, char** av)
 	str2[0] = 'd';
 	index1 = 2;
 	index2 = 1;
-	char	num[3];
+	char	num[4];
+	num[3] = '\0';
 	while (true)
 	{
-		if (strlen(str2) < 8)
-		{
-			if (index1 >= strlen(&input))
+		if (strlen(str2) > 8 || index1 >= strlen(input))
 				break;
-		}
-		num[0] = str1[0];
-		num[1] = str1[1];
-		num[2] = str1[2];
+		num[0] = input[index1];
+		num[1] = input[index1 + 1];
+		num[2] = input[index1 + 2];
 		str2[index2] = (char)atoi(num);
 		index1 += 3;
 		index2 += 1;
+		printf("%d\n", index1);
 	}
 	str2[index2] = '\0';
 
